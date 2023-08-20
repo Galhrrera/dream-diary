@@ -4,7 +4,7 @@ $color-botones: #b1eb7a;
 $color-extra-1: #6ec7eb;
 $color-extra-2: #e29deb;
 $max-width: 373px;
-$max-height: 768px;
+$max-height: 851px;
 $splash-title-width: 332px;
 $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 
@@ -14,14 +14,39 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
     font-family: sans-serif;
     width: $max-width;
     border: 1px solid black;
+    /*ELMINAR*/
+}
+
+.hidden {
+    display: none;
+    transition: all ease 0.3ms;
+}
+
+.visible {
+    display: block;
+    transition: all ease 0.3ms;
+}
+
+#banner {
+    text-align: center;
+    justify-content: center;
+    background-color: $color-bordes;
+
+    a {
+        text-decoration: none;
+        width: $max-width;
+        color: white;
+    }
 }
 
 section {
     height: $max-height;
+    background-color: $color-fondo-app;
 }
 
 #title-section {
-    background-image: url("../assets/splash-bg.jpg"); /* Imagen generaca on IA (Leonardo AI)*/
+    background-image: url("../assets/splash-bg.jpg");
+    /* Imagen generaca on IA (Leonardo AI)*/
     height: $max-height;
     display: flex;
     justify-content: center;
@@ -29,8 +54,6 @@ section {
     background-size: cover;
     background-position: center;
     color: white;
-
- 
 
     h1 {
         text-align: center;
@@ -41,3 +64,14 @@ section {
         background-color: $splash-title-bg-color;
     }
 }
+
+// #start-section {
+//     h1 {
+//         text-align: center;
+//         width: $splash-title-width;
+//         font-size: 45px;
+//         margin: 0;
+//         padding: 20px;
+//         background-color: $color-bordes;
+//     }
+// }

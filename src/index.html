@@ -1,25 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream diary</title>
+    <link rel="stylesheet" href="./css/vendor/animate.min.css">
     <link rel="stylesheet" href="./scss/main.scss">
+
 </head>
 
 <body>
-    <section id="title-section">
-        <h1>Dream diary</h1>
+    <section id="title-section" class="visible">
+        <h1 class="animate__fadeIn">Dream diary</h1>
     </section>
 
-    <section id="start-section">
-        <h1>Dream diary</h1>
+    <h1 class="banner hidden" id="banner"><a href="javascript:void(0)">Dream diary</a></h1>
+    <section id="start-section" class="hidden">
+        
         <button id="dreamListBtn">Lista de sueños</button>
         <button id="recordDreamBtn">Registrar sueño</button>
     </section>
 
-    <section id="record-dream-section">
+    <section id="record-dream-section" class="hidden">
         <h1>Dream diary</h1>
         <h2>Registrar sueño</h2>
         <form id="dreamForm">
@@ -34,7 +37,7 @@
         </form>
     </section>
 
-    <section id="saved-dream-section">
+    <section id="saved-dream-section" class="hidden">
         <h1>Dream diary</h1>
         <h2>¡SUEÑO GUARDADO!</h2>
         <p>El sueño ha sido guardado exitosamente.</p>
@@ -43,7 +46,7 @@
         <button id="dreamListBtn2">Lista de sueños</button>
     </section>
 
-    <section id="dream-details-section">
+    <section id="dream-details-section" class="hidden">
         <h1>Dream diary</h1>
         <h2>Detalles de sueño</h2>
         <p><strong>Fecha:</strong> <span id="detailDate"></span></p>
@@ -53,7 +56,7 @@
         <button id="backToListBtn">Volver</button>
     </section>
 
-    <section id="dream-list-section">
+    <section id="dream-list-section" class="hidden">
         <h1>Dream diary</h1>
         <h2>Lista de sueños</h2>
         <label for="filterDate">Filtrar por fecha:</label>
