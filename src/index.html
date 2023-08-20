@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream diary</title>
+    <link rel="stylesheet" href="./scss/main.scss">
 </head>
+
 <body>
-    
+    <section id="title-section">
+        <h1>Dream diary</h1>
+    </section>
+
+    <section id="start-section">
+        <h1>Dream diary</h1>
+        <button id="dreamListBtn">Lista de sueños</button>
+        <button id="recordDreamBtn">Registrar sueño</button>
+    </section>
+
+    <section id="record-dream-section">
+        <h1>Dream diary</h1>
+        <h2>Registrar sueño</h2>
+        <form id="dreamForm">
+            <label for="dreamDate">Fecha</label>
+            <input type="date" id="dreamDate" required>
+            <label for="dreamTitle">Título</label>
+            <input type="text" id="dreamTitle" required>
+            <label for="dreamDescription">Descripción</label>
+            <textarea id="dreamDescription" required></textarea>
+            <button type="submit" id="saveDreamBtn">Guardar</button>
+            <button id="backToStartBtn">Volver</button>
+        </form>
+    </section>
+
+    <section id="saved-dream-section">
+        <h1>Dream diary</h1>
+        <h2>¡SUEÑO GUARDADO!</h2>
+        <p>El sueño ha sido guardado exitosamente.</p>
+        <button id="acceptBtn">Aceptar</button>
+        <button id="viewDreamBtn">Ver sueño</button>
+        <button id="dreamListBtn2">Lista de sueños</button>
+    </section>
+
+    <section id="dream-details-section">
+        <h1>Dream diary</h1>
+        <h2>Detalles de sueño</h2>
+        <p><strong>Fecha:</strong> <span id="detailDate"></span></p>
+        <p><strong>Título:</strong> <span id="detailTitle"></span></p>
+        <p><strong>Descripción:</strong> <span id="detailDescription"></span></p>
+        <button id="backToStartBtn2">Inicio</button>
+        <button id="backToListBtn">Volver</button>
+    </section>
+
+    <section id="dream-list-section">
+        <h1>Dream diary</h1>
+        <h2>Lista de sueños</h2>
+        <label for="filterDate">Filtrar por fecha:</label>
+        <input type="date" id="filterDate">
+        <ul id="dreamList"></ul>
+        <button id="backToStartBtn3">Volver</button>
+    </section>
+
     <script src="./js/index.js"></script>
 </body>
+
 </html>
