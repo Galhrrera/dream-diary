@@ -1,0 +1,13 @@
+{
+  "name": "dream-diary",
+  "version": "1.0.0",
+  "description": "Actividad evaluativa para el módulo 2 del curso de aplicaciones móviles 2023-20: Una aplicación híbrida",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
