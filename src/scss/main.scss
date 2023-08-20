@@ -3,3 +3,41 @@ $color-bordes: #ebb06e;
 $color-botones: #b1eb7a;
 $color-extra-1: #6ec7eb;
 $color-extra-2: #e29deb;
+$max-width: 373px;
+$max-height: 768px;
+$splash-title-width: 332px;
+$splash-title-bg-color: rgba(0, 0, 0, 0.5);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: $max-width;
+    border: 1px solid black;
+}
+
+section {
+    height: $max-height;
+}
+
+#title-section {
+    background-image: url("../assets/splash-bg.jpg"); /* Imagen generaca on IA (Leonardo AI)*/
+    height: $max-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+ 
+
+    h1 {
+        text-align: center;
+        width: $splash-title-width;
+        font-size: 45px;
+        margin: 0;
+        padding: 20px;
+        background-color: $splash-title-bg-color;
+    }
+}
