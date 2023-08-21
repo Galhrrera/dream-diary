@@ -161,6 +161,13 @@ section {
     flex-direction: column;
     align-items: center;
 
+    .section-title {
+        text-align: center;
+        justify-content: center;
+        margin-top: 120px;
+        font-size: 30px;
+    }
+
     .list-container {
         max-height: 600px;
         margin-top: 25px;
@@ -170,7 +177,8 @@ section {
         /* Aparecerá una barra de desplazamiento vertical si la lista es más grande que el div */
         border: 1px solid #ccc;
         margin-bottom: 10px;
-        border: 2px solid $color-bordes;
+        // border: 2px solid $color-extra-1;
+        width: 300px;
 
         ul {
             list-style: none;
@@ -180,8 +188,12 @@ section {
             li {
                 // width: 250px;
                 // margin-bottom: 10px;
-                padding: 5px;
-                border-bottom: 1px solid #ccc;
+                padding: 10px;
+                border-bottom: 3px solid $color-extra-2;
+
+                &:hover {
+                    background-color: $color-extra-1;
+                }
             }
 
         }
