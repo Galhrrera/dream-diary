@@ -47,12 +47,6 @@ headerLink.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', function () {
     
     startToDreamListBtn.addEventListener('click', function () {
-        // Remover la clase actual y agregar la nueva clase
-        // elemento1.classList.toggle('clase1');
-        // elemento1.classList.toggle('clase2');
-        
-        // elemento2.classList.toggle('clase2');
-        // elemento2.classList.toggle('clase1');
         start.classList.toggle("hidden");
         dreamList.classList.toggle("hidden");
     });
