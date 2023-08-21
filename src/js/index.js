@@ -13,6 +13,7 @@ const headerLink = document.getElementById("headerLink");
 //Referencias botones
 const startToDreamListBtn = document.getElementById("dreamListBtn");
 const startToRecordDreamBtn = document.getElementById("recordDreamBtn");
+const dreamListToStartBtn = document.getElementById("backToStartBtn3")
 
 
 window.onload = function () {
@@ -45,10 +46,25 @@ headerLink.addEventListener("click", () => {
 
 //Start to List section
 document.addEventListener('DOMContentLoaded', function () {
-    
     startToDreamListBtn.addEventListener('click', function () {
-        start.classList.toggle("hidden");
-        dreamList.classList.toggle("hidden");
+        start.classList.add("hidden");
+        dreamList.classList.remove("hidden");
+    });
+});
+
+//List to Start
+document.addEventListener('DOMContentLoaded', function () {
+    dreamListToStartBtn.addEventListener('click', function () {
+        dreamList.classList.add("hidden");
+        start.classList.remove("hidden");
+    });
+});
+
+//Start to Record dream
+document.addEventListener('DOMContentLoaded', function () {
+    startToRecordDreamBtn.addEventListener('click', function () {
+        start.classList.add("hidden");
+        recordDream.classList.remove("hidden");
     });
 });
 
