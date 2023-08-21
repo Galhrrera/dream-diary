@@ -1,113 +1,100 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona las secciones
-    const splashSection = document.getElementById("title-section");
-    const startSection = document.getElementById("start-section");
-    const banner = document.getElementById("banner");
+// Referencias de las secciones
+const splash = document.getElementById("title-section");
+const start = document.getElementById("start-section");
+const recordDream = document.getElementById("record-dream-section");
+const savedDream = document.getElementById("saved-dream-section");
+const dreamDetails = document.getElementById("dream-details-section");
+const dreamList = document.getElementById("dream-list-section");
+const header = document.getElementById("header");
+const headerLink = document.getElementById("headerLink");
 
-    // Espera 3 segundos y luego oculta la sección de título y muestra la nueva sección
+
+window.onload = function () {
+    hideAllSections();
     setTimeout(() => {
-        splashSection.classList.remove("visible");
-        splashSection.classList.add("hidden");
-        startSection.classList.remove("hidden");
-        startSection.classList.add("visible");
-        banner.classList.remove("hidden");
-        banner.classList.add("visible");
-        // splashSection.style.display = "none";
-        // startSection.style.display = "block";
-        // banner.style.display = "block";
+        hideSplahs();
     }, 3000);
+}
+
+function hideAllSections() {
+    start.classList.toggle("hidden");
+    recordDream.classList.toggle("hidden");
+    savedDream.classList.toggle("hidden");
+    dreamDetails.classList.toggle("hidden");
+    dreamList.classList.toggle("hidden");
+    header.classList.toggle("hidden");
+}
+
+function hideSplahs(){
+    splash.classList.toggle("hidden");
+    start.classList.toggle("hidden");
+    header.classList.toggle("hidden");
+}
+
+headerLink.addEventListener("click", () => {
+    hideAllSections();
+    startSection.classList.remove("hidden");
 });
 
-// function goToStartSection()
 
-// // console.log("hola mundo desde parcel)");
 // document.addEventListener("DOMContentLoaded", function () {
-//     const sections = document.querySelectorAll("section");
-//     const dreamForm = document.getElementById("dreamForm");
-//     const dreamList = document.getElementById("dreamList");
+//     // Selecciona las secciones
+//     const splashSection = document.getElementById("title-section");
+//     const startSection = document.getElementById("start-section");
+//     const header = document.getElementById("header");
 
-//     // Mostrar sección inicial después de 3 segundos
+//     // Espera 3 segundos y luego oculta la sección de título y muestra la nueva sección
 //     setTimeout(() => {
-//         sections[0].classList.add("hidden");
-//         sections[1].classList.remove("hidden");
+//         // splashSection.classList.add("hidden");
+//         // startSection.classList.remove("hidden");
+//         // header.classList.remove("hidden");
+//         splashSection.classList.toggle("hidden");
+
 //     }, 3000);
-
-//     // Mostrar sección por su ID y ocultar las demás
-//     function showSection(sectionId) {
-//         sections.forEach(section => {
-//             if (section.id === sectionId) {
-//                 section.classList.remove("hidden");
-//             } else {
-//                 section.classList.add("hidden");
-//             }
-//         });
-//     }
-
-//     // Evento para mostrar la sección de Registro de Sueño
-//     document.getElementById("recordDreamBtn").addEventListener("click", function () {
-//         showSection("record-dream-section");
-//     });
-
-//     // Evento para volver a la sección de Inicio
-//     document.querySelectorAll("#backToStartBtn, #backToStartBtn2, #backToStartBtn3").forEach(button => {
-//         button.addEventListener("click", function () {
-//             showSection("start-section");
-//         });
-//     });
-
-//     // Evento para guardar el sueño y mostrar la sección de Sueño Guardado
-//     dreamForm.addEventListener("submit", function (event) {
-//         event.preventDefault();
-//         const dreamDate = document.getElementById("dreamDate").value;
-//         const dreamTitle = document.getElementById("dreamTitle").value;
-//         const dreamDescription = document.getElementById("dreamDescription").value;
-
-//         const dream = { date: dreamDate, title: dreamTitle, description: dreamDescription };
-//         localStorage.setItem("lastDream", JSON.stringify(dream));
-
-//         showSection("saved-dream-section");
-//     });
-
-//     // Evento para mostrar los detalles del sueño
-//     document.getElementById("viewDreamBtn").addEventListener("click", function () {
-//         const lastDream = JSON.parse(localStorage.getItem("lastDream"));
-//         document.getElementById("detailDate").textContent = lastDream.date;
-//         document.getElementById("detailTitle").textContent = lastDream.title;
-//         document.getElementById("detailDescription").textContent = lastDream.description;
-
-//         showSection("dream-details-section");
-//     });
-
-//     // Evento para mostrar la lista de sueños
-//     document.getElementById("dreamListBtn, #dreamListBtn2").addEventListener("click", function () {
-//         populateDreamList();
-//         showSection("dream-list-section");
-//     });
-
-//     // Rellenar la lista de sueños
-//     function populateDreamList() {
-//         dreamList.innerHTML = "";
-//         for (let i = 0; i < localStorage.length; i++) {
-//             const dreamKey = localStorage.key(i);
-//             if (dreamKey.startsWith("dream")) {
-//                 const dream = JSON.parse(localStorage.getItem(dreamKey));
-//                 const listItem = document.createElement("li");
-//                 listItem.textContent = `${dream.date} - ${dream.title}`;
-//                 dreamList.appendChild(listItem);
-//             }
-//         }
-//     }
-
-//     // Evento para mostrar la sección de Detalles de Sueño
-//     dreamList.addEventListener("click", function (event) {
-//         if (event.target.tagName === "LI") {
-//             const dreamKey = event.target.textContent.split(" - ")[1];
-//             const dream = JSON.parse(localStorage.getItem(dreamKey));
-//             document.getElementById("detailDate").textContent = dream.date;
-//             document.getElementById("detailTitle").textContent = dream.title;
-//             document.getElementById("detailDescription").textContent = dream.description;
-
-//             showSection("dream-details-section");
-//         }
-//     });
 // });
+
+// // Obtener referencias a todas las secciones
+// const titleSection = document.getElementById("title-section");
+// const startSection = document.getElementById("start-section");
+// const recordDreamSection = document.getElementById("record-dream-section");
+// const savedDreamSection = document.getElementById("saved-dream-section");
+// const dreamDetailsSection = document.getElementById("dream-details-section");
+// const dreamListSection = document.getElementById("dream-list-section");
+// const header = document.getElementById("header");
+
+// // Botón del header para volver al inicio
+// const headerLink = document.getElementById("headerLink");
+// headerLink.addEventListener("click", () => {
+//     hideAllSections();
+//     startSection.classList.remove("hidden");
+// });
+
+// // Función para ocultar todas las secciones
+// function hideAllSections() {
+//     titleSection.classList.add("hidden");
+//     startSection.classList.add("hidden");
+//     recordDreamSection.classList.add("hidden");
+//     savedDreamSection.classList.add("hidden");
+//     dreamDetailsSection.classList.add("hidden");
+//     dreamListSection.classList.add("hidden");
+// }
+
+// // Mostrar la sección de inicio después de 3 segundos
+// setTimeout(() => {
+//     titleSection.classList.add("hidden");
+//     startSection.classList.remove("hidden");
+// }, 3000);
+
+// // Mostrar sección de registro de sueños al hacer clic en el botón
+// document.getElementById("recordDreamBtn").addEventListener("click", () => {
+//     hideAllSections();
+//     recordDreamSection.classList.remove("hidden");
+// });
+
+// // Implementa el resto de la funcionalidad similar a los botones anteriores...
+
+// // Asegúrate de implementar la lógica de guardar y leer datos del local storage
+
+// // Implementa la funcionalidad de los botones de aceptar, ver sueño, lista de sueños, etc.
+
+// // Asegúrate de tener un script que maneje las interacciones y el almacenamiento de datos

@@ -10,20 +10,20 @@
 </head>
 
 <body>
-    <section id="title-section" class="visible">
-        <h1 class="animate__fadeIn">Dream diary</h1>
+    <header id="header">
+        <a href="javascript:void(0)" id="headerLink">DREAM DIARY</a>
+    </header>
+
+    <section id="title-section">
+        <h1>Dream diary</h1>
     </section>
 
-    <h1 class="banner hidden" id="banner"><a href="javascript:void(0)">Dream diary</a></h1>
-    <section id="start-section" class="hidden">
-
+    <section id="start-section">
         <button id="dreamListBtn">LISTA DE SUEÑOS</button>
         <button id="recordDreamBtn">REGISTRAR UN SUEÑO</button>
     </section>
 
-    <section id="record-dream-section" class="hidden">
-        <h1>Dream diary</h1>
-        <h2>Registrar sueño</h2>
+    <section id="record-dream-section">
         <form id="dreamForm">
             <label for="dreamDate">Fecha</label>
             <input type="date" id="dreamDate" required>
@@ -36,18 +36,14 @@
         </form>
     </section>
 
-    <section id="saved-dream-section" class="hidden">
-        <h1>Dream diary</h1>
-        <h2>¡SUEÑO GUARDADO!</h2>
+    <section id="saved-dream-section">
         <p>El sueño ha sido guardado exitosamente.</p>
         <button id="acceptBtn">Aceptar</button>
         <button id="viewDreamBtn">Ver sueño</button>
         <button id="dreamListBtn2">Lista de sueños</button>
     </section>
 
-    <section id="dream-details-section" class="hidden">
-        <h1>Dream diary</h1>
-        <h2>Detalles de sueño</h2>
+    <section id="dream-details-section">
         <p><strong>Fecha:</strong> <span id="detailDate"></span></p>
         <p><strong>Título:</strong> <span id="detailTitle"></span></p>
         <p><strong>Descripción:</strong> <span id="detailDescription"></span></p>
@@ -55,9 +51,7 @@
         <button id="backToListBtn">Volver</button>
     </section>
 
-    <section id="dream-list-section" class="hidden">
-        <h1>Dream diary</h1>
-        <h2>Lista de sueños</h2>
+    <section id="dream-list-section">
         <label for="filterDate">Filtrar por fecha:</label>
         <input type="date" id="filterDate">
         <ul id="dreamList"></ul>

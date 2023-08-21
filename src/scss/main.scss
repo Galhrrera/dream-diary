@@ -4,7 +4,7 @@ $color-botones: #b1eb7a;
 $color-extra-1: #6ec7eb;
 $color-extra-2: #e29deb;
 $max-width: 373px;
-$max-height: 851px;
+$max-height: 715px;
 $splash-title-width: 332px;
 $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 
@@ -19,20 +19,15 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 
 .hidden {
     display: none;
-    transition: all ease 300ms;
 }
 
-.visible {
-    display: block;
-    transition: all ease 300ms;
-}
-
-#banner {
+#header {
     text-align: center;
     justify-content: center;
     background-color: $color-bordes;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: fixed;
 
     a {
         text-decoration: none;
@@ -47,15 +42,14 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 }
 
 section {
-    height: $max-height;
     background-color: $color-fondo-app;
 }
 
 #title-section {
     background-image: url("../assets/splash-bg.jpg");
     /* Imagen generaca on IA (Leonardo AI)*/
-    height: $max-height;
-    display: flex;
+    height: 808px;
+    // display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -73,41 +67,42 @@ section {
 }
 
 #start-section {
-    display: flex;
     flex-direction: column;
-    align-items: center; // Centra horizontalmente
-    justify-content: center; // Centra verticalmente
-  
+    align-items: center;
+    justify-content: center;
+    height: $max-height;
+    margin-top: 93px;
+
     button {
-      width: 80%;
-      padding: 20px;
-      margin-bottom: 50px;
-      border-radius: 8px;
-      border: 1px $color-bordes solid;
-      background-color: $color-botones;
-      cursor: pointer;
-      font-size: 20px;
-      display: flex;
-      align-items: center; // Centra el contenido verticalmente
-      justify-content: center; // Centra el contenido horizontalmente
-      text-align: center;
-  
-      &:first-child {
-        color: black;
-        padding-left: 30px;
-        background-repeat: no-repeat;
-        background-position: 10px center;
-      }
-  
-      &:last-child {
-        color: black;
-        padding-left: 30px;
-        background-repeat: no-repeat;
-        background-position: 10px center;
-      }
-  
-      &:hover {
-        background-color: $color-bordes;
-      }
+        width: 80%;
+        padding: 20px;
+        margin-bottom: 50px;
+        border-radius: 8px;
+        border: 1px $color-bordes solid;
+        background-color: $color-botones;
+        cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+
+        &:first-child,
+        &:last-child {
+            color: black;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+
+        &:hover {
+            background-color: $color-bordes;
+        }
     }
-  }
+
+    // Centrar verticalmente
+    button {
+        position: relative;
+        top: 35%;
+        left: 9%;
+    }
+}
+
+
