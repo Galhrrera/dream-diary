@@ -19,8 +19,8 @@
     </section>
 
     <section id="start-section">
-        <button id="dreamListBtn">LISTA DE SUEÑOS</button>
-        <button id="recordDreamBtn">REGISTRAR UN SUEÑO</button>
+        <button id="dreamListBtn" class="btn">LISTA DE SUEÑOS</button>
+        <button id="recordDreamBtn" class="btn">REGISTRAR UN SUEÑO</button>
     </section>
 
     <section id="record-dream-section">
@@ -31,31 +31,60 @@
             <input type="text" id="dreamTitle" required>
             <label for="dreamDescription">Descripción</label>
             <textarea id="dreamDescription" required></textarea>
-            <button type="submit" id="saveDreamBtn">Guardar</button>
-            <button id="backToStartBtn">Volver</button>
+            <button type="submit" id="saveDreamBtn" class="btn">Guardar</button>
+            <button id="backToStartBtn" class="btn">Volver</button>
         </form>
     </section>
 
     <section id="saved-dream-section">
         <p>El sueño ha sido guardado exitosamente.</p>
-        <button id="acceptBtn">Aceptar</button>
-        <button id="viewDreamBtn">Ver sueño</button>
-        <button id="dreamListBtn2">Lista de sueños</button>
+        <button id="acceptBtn" class="btn">Aceptar</button>
+        <button id="viewDreamBtn" class="btn">Ver sueño</button>
+        <button id="dreamListBtn2" class="btn">Lista de sueños</button>
     </section>
 
     <section id="dream-details-section">
         <p><strong>Fecha:</strong> <span id="detailDate"></span></p>
         <p><strong>Título:</strong> <span id="detailTitle"></span></p>
         <p><strong>Descripción:</strong> <span id="detailDescription"></span></p>
-        <button id="backToStartBtn2">Inicio</button>
-        <button id="backToListBtn">Volver</button>
+        <button id="backToStartBtn2" class="btn">Inicio</button>
+        <button id="backToListBtn" class="btn">Volver</button>
     </section>
 
     <section id="dream-list-section">
-        <label for="filterDate">Filtrar por fecha:</label>
-        <input type="date" id="filterDate">
-        <ul id="dreamList"></ul>
-        <button id="backToStartBtn3">Volver</button>
+        <!-- <label for="filterDate">Filtrar por fecha:</label>
+        <input type="date" id="filterDate"> -->
+        <div class="list-container">
+            <ul id="dreamList">
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test1</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+        </div>
+        <button id="backToStartBtn3" class="btn">Volver</button>
     </section>
 
     <script src="./js/index.js"></script>

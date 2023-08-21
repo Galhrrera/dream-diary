@@ -41,6 +41,22 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
     }
 }
 
+.btn {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    border: 1px $color-bordes solid;
+    background-color: $color-botones;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-bordes;
+    }
+}
+
 section {
     background-color: $color-fondo-app;
 }
@@ -76,15 +92,15 @@ section {
     margin-top: 93px;
 
     button {
-        width: 80%;
-        padding: 20px;
-        margin-bottom: 50px;
-        border-radius: 8px;
-        border: 1px $color-bordes solid;
-        background-color: $color-botones;
-        cursor: pointer;
-        font-size: 20px;
-        text-align: center;
+        // width: 80%;
+        // padding: 20px;
+        // margin-bottom: 50px;
+        // border-radius: 8px;
+        // border: 1px $color-bordes solid;
+        // background-color: $color-botones;
+        // cursor: pointer;
+        // font-size: 20px;
+        // text-align: center;
 
         &:first-child,
         &:last-child {
@@ -92,10 +108,6 @@ section {
             padding-left: 30px;
             background-repeat: no-repeat;
             background-position: 10px center;
-        }
-
-        &:hover {
-            background-color: $color-bordes;
         }
     }
 
@@ -108,3 +120,48 @@ section {
 }
 
 
+#dream-list-section {
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    height: $max-height;
+    // margin-top: 93px;
+    // display: flex;
+    margin-top: 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .list-container {
+        max-height: 600px;
+        margin-top: 25px;
+        /* Tamaño máximo del div que contiene la lista */
+        overflow-y: auto;
+        overflow-x: hidden;
+        /* Aparecerá una barra de desplazamiento vertical si la lista es más grande que el div */
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        border: 2px solid $color-bordes;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                // width: 250px;
+                // margin-bottom: 10px;
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+            }
+
+        }
+    }
+
+    // Centrar verticalmente
+    button {
+        position: relative;
+        bottom: 20px;
+        top: 20px;
+    }
+}
