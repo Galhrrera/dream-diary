@@ -14,11 +14,7 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
     font-family: sans-serif;
     width: $max-width;
     border: 1px solid black;
-    /*ELMINAR*/
-}
-
-.hidden {
-    display: none;
+    /*ELMINAR Y CORREGIR LO DEMÁS*/
 }
 
 #header {
@@ -151,14 +147,9 @@ section {
 
 
 #dream-list-section {
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     height: $max-height;
-    // margin-top: 93px;
-    // display: flex;
     margin-top: 0px;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -170,8 +161,9 @@ section {
     }
 
     .list-container {
-        max-height: 600px;
+        max-height: 450px;
         margin-top: 25px;
+        margin-left: 30px;
         /* Tamaño máximo del div que contiene la lista */
         overflow-y: auto;
         overflow-x: hidden;
@@ -180,6 +172,7 @@ section {
         margin-bottom: 10px;
         // border: 2px solid $color-extra-1;
         width: 300px;
+        border-bottom: 2px solid black;
 
         ul {
             list-style: none;
@@ -205,13 +198,14 @@ section {
         position: relative;
         bottom: 20px;
         top: 20px;
+        margin-left: 30px;
     }
 }
 
 #record-dream-section {
     height: $max-height;
     margin-top: 0px;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -224,6 +218,7 @@ section {
 
     form {
         margin-top: 50px;
+        margin-left: 30px;
         width: 300px;
 
 
@@ -278,4 +273,14 @@ section {
 
 #backToStartBtn {
     margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+.hidden {
+    display: none;
 }
