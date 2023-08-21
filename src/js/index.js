@@ -13,7 +13,8 @@ const headerLink = document.getElementById("headerLink");
 //Referencias botones
 const startToDreamListBtn = document.getElementById("dreamListBtn");
 const startToRecordDreamBtn = document.getElementById("recordDreamBtn");
-const dreamListToStartBtn = document.getElementById("backToStartBtn3")
+const dreamListToStartBtn = document.getElementById("backToStartBtn3");
+const recordToStartBtn = document.getElementById("backToStartBtn");
 
 
 window.onload = function () {
@@ -41,7 +42,8 @@ function hideSplahs(){
 //CORREGIR MÉTODO
 headerLink.addEventListener("click", () => {
     hideAllSections();
-    startSection.classList.remove("hidden");
+    header.classList.remove("hidden");
+    start.classList.remove("hidden");
 });
 
 //Start to List section
@@ -68,3 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Record to start
+document.addEventListener('DOMContentLoaded', function(){
+    recordToStartBtn.addEventListener('click', function() {
+        recordDream.classList.add("hidden");
+        start.classList.remove("hidden");
+    });
+});
