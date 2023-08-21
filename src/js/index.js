@@ -15,6 +15,10 @@ const startToDreamListBtn = document.getElementById("dreamListBtn");
 const startToRecordDreamBtn = document.getElementById("recordDreamBtn");
 const dreamListToStartBtn = document.getElementById("backToStartBtn3");
 const recordToStartBtn = document.getElementById("backToStartBtn");
+const saveDreamBtn = document.getElementById("saveDreamBtn");
+
+//Referencia al formulario para guardar sueño
+const dreamForm = document.getElementById("dreamForm");
 
 
 window.onload = function () {
@@ -33,7 +37,7 @@ function hideAllSections() {
     header.classList.add("hidden");
 }
 
-function hideSplahs(){
+function hideSplahs() {
     splash.classList.add("hidden");
     start.classList.remove("hidden");
     header.classList.remove("hidden");
@@ -71,9 +75,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Record to start
-document.addEventListener('DOMContentLoaded', function(){
-    recordToStartBtn.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    recordToStartBtn.addEventListener('click', function () {
         recordDream.classList.add("hidden");
         start.classList.remove("hidden");
+    });
+});
+
+
+//Guardar sueño en localstorage
+document.addEventListener("DOMContentLoaded", function () {
+    // Agregar un manejador de eventos para el envío del formulario
+    dreamForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+        // Obtén los valores de los campos del formulario
+        const dreamDate = document.getElementById("dreamDate").value;
+        const dreamTitle = document.getElementById("dreamTitle").value;
+        const dreamDescription = document.getElementById("dreamDescription").value;
+        // Crea un objeto para representar el sueño
+        const dream = {
+            date: dreamDate,
+            title: dreamTitle,
+            description: dreamDescription
+        };
+        // Obtén los sueños existentes o crea un nuevo array vacío
+        const existingDreams = JSON.parse(localStorage.getItem("dreams")) || [];
+        // Agrega el sueño al array de sueños
+        existingDreams.push(dream);
+        // Almacena el array actualizado en el LocalStorage
+        localStorage.setItem("dreams", JSON.stringify(existingDreams));
+        // Limpia los campos del formulario después de guardar
+        dreamForm.reset();
+
+        recordDream.classList.add("hidden");
+        savedDream.classList.remove("hidden");
     });
 });
