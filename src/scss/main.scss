@@ -19,23 +19,30 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 
 .hidden {
     display: none;
-    transition: all ease 0.3ms;
+    transition: all ease 300ms;
 }
 
 .visible {
     display: block;
-    transition: all ease 0.3ms;
+    transition: all ease 300ms;
 }
 
 #banner {
     text-align: center;
     justify-content: center;
     background-color: $color-bordes;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     a {
         text-decoration: none;
         width: $max-width;
         color: white;
+        text-align: center;
+        width: $splash-title-width;
+        font-size: 45px;
+        margin: 0;
+        background-color: $color-bordes;
     }
 }
 
@@ -65,13 +72,42 @@ section {
     }
 }
 
-// #start-section {
-//     h1 {
-//         text-align: center;
-//         width: $splash-title-width;
-//         font-size: 45px;
-//         margin: 0;
-//         padding: 20px;
-//         background-color: $color-bordes;
-//     }
-// }
+#start-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra horizontalmente
+    justify-content: center; // Centra verticalmente
+  
+    button {
+      width: 80%;
+      padding: 20px;
+      margin-bottom: 50px;
+      border-radius: 8px;
+      border: 1px $color-bordes solid;
+      background-color: $color-botones;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center; // Centra el contenido verticalmente
+      justify-content: center; // Centra el contenido horizontalmente
+      text-align: center;
+  
+      &:first-child {
+        color: black;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+      }
+  
+      &:last-child {
+        color: black;
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+      }
+  
+      &:hover {
+        background-color: $color-bordes;
+      }
+    }
+  }
