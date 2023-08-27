@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadDreams() {
     const dreamList = document.getElementById("dreamList");
     const dreams = JSON.parse(localStorage.getItem("dreams")) || [];
-    alert(dreams);
 
     // Limpiar la lista antes de agregar los elementos
     dreamList.innerHTML = "";
@@ -168,18 +167,24 @@ function showDreamDetails(event) {
     document.getElementById("detailDescription").textContent = dream.description;
 
     // Ocultar la lista de sueños y mostrar la sección de detalles
-    document.getElementById("dream-list-section").style.display = "none";
-    document.getElementById("dream-details-section").style.display = "block";
+    // document.getElementById("dream-list-section").style.display = "none";
+    document.getElementById("dream-list-section").classList.add("hidden");
+    // document.getElementById("dream-details-section").style.display = "block";
+    document.getElementById("dream-details-section").classList.remove("hidden");
 
     // Agregar evento click a los botones de regreso
     document.getElementById("backToListBtn").addEventListener("click", () => {
-        document.getElementById("dream-details-section").style.display = "none";
-        document.getElementById("dream-list-section").style.display = "block";
+        // document.getElementById("dream-details-section").style.display = "none";
+        document.getElementById("dream-details-section").classList.add("hidden");
+        // document.getElementById("dream-list-section").style.display = "block";
+        document.getElementById("dream-list-section").classList.remove("hidden");
     });
 
     document.getElementById("backToStartBtn2").addEventListener("click", () => {
-        document.getElementById("dream-details-section").style.display = "none";
-        document.getElementById("dream-list-section").style.display = "block";
+        // document.getElementById("dream-details-section").style.display = "none";
+        dreamDetails.classList.add("hidden");
+        // document.getElementById("dream-list-section").style.display = "block";
+        start.classList.remove("hidden");
     });
 }
 
