@@ -69,4 +69,4 @@ Las siguientes dependencias se utilizan en este proyecto:
 - **parcel v1.12.5**: Empaquetador de aplicaciones web para el desarrollo y la construcción.
 
   ## Wireframes de la aplicación
-  [Wireframes figma](https://www.figma.com/file/GGQbg9XoqCIfZi7Gp9WGs4/Dream-diary?type=design&node-id=0%3A1&mode=design&t=bx5wlWOBIbpvhUsL-1) {:target="_blank"}
+  <a href="https://www.figma.com/file/GGQbg9XoqCIfZi7Gp9WGs4/Dream-diary?type=design&node-id=0%3A1&mode=design&t=bx5wlWOBIbpvhUsL-1" target="_blank"> Wireframes figma </a>
