@@ -1,0 +1,69 @@
+<!DOCTYPE html <html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream diary</title>
+    <link rel="stylesheet" href="/main.77bb5cfd.css">
+
+<script src="/main.77bb5cfd.js"></script></head>
+
+<body>
+    <header id="header">
+        <a href="javascript:void(0)" id="headerLink">DREAM DIARY</a>
+    </header>
+
+    <section id="title-section">
+        <h1>Dream diary</h1>
+    </section>
+
+    <section id="start-section">
+        <button id="dreamListBtn" class="btn">LISTA DE SUEÑOS</button>
+        <button id="recordDreamBtn" class="btn">REGISTRAR UN SUEÑO</button>
+    </section>
+
+    <section id="record-dream-section">
+        <h2 class="section-title">REGISTRAR SUEÑO</h2>
+        <form id="dreamForm">
+            <label for="dreamDate">Fecha</label>
+            <input type="date" id="dreamDate" required="">
+            <label for="dreamTitle">Título</label>
+            <input type="text" id="dreamTitle" required="" placeholder="Ingrese el título del sueño">
+            <label for="dreamDescription">Descripción</label>
+            <textarea id="dreamDescription" required="" placeholder="Ingrese la descripción del sueño"></textarea>
+            <button type="submit" id="saveDreamBtn" class="btn">Guardar</button>
+        </form>
+        <button id="backToStartBtn" class="btn">Volver</button>
+    </section>
+
+    <section id="saved-dream-section">
+        <h2 class="section-title">¡SUEÑO GUARDADO!</h2>
+        <button id="acceptBtn" class="btn">Aceptar</button>
+        <button id="dreamListBtn2" class="btn">Lista de sueños</button>
+    </section>
+
+    <section id="dream-details-section">
+        <h2 class="section-title">¡DETALLE DEL SUEÑO!</h2>
+        <div class="details-dream-container">
+            <p><strong>Fecha:</strong> <span id="detailDate"></span></p>
+            <p><strong>Título:</strong> <span id="detailTitle"></span></p>
+            <p><strong>Descripción:</strong> <br><span id="detailDescription"></span></p>
+        </div>
+        <div class="btns-container">
+            <button id="backToStartBtn2" class="btn">Inicio</button>
+            <button id="backToListBtn" class="btn">Volver</button>
+        </div>
+    </section>
+
+    <section id="dream-list-section">
+        <h2 class="section-title">LISTA DE SUEÑOS</h2>
+        <div class="list-container">
+            <ul id="dreamList">
+            </ul>
+        </div>
+        <button id="backToStartBtn3" class="btn">Volver</button>
+    </section>
+
+    <script src="/js.00a46daa.js"></script>
+</body>
+
