@@ -2,7 +2,8 @@
   "name": "dream-diary",
   "version": "1.0.0",
   "description": "Actividad evaluativa para el módulo 2 del curso de aplicaciones móviles 2023-20: Una aplicación híbrida",
-  "main": "index.js",
+  "source": "src/js/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean:dev": "rimraf ./dist",
     "clean:prod": "rimraf ./public",
@@ -16,5 +17,8 @@
     "parcel": "^1.12.4",
     "rimraf": "^5.0.1",
     "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
