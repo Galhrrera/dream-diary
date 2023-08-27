@@ -2,6 +2,10 @@
 
 Esta es una aplicación híbrida desarrollada como actividad evaluativa para el módulo 2 del curso de aplicaciones móviles 2023-20 en el programa de ingeniería de sistemas e informática. La aplicación permite a los usuarios registrar y almacenar sus sueños en un diario virtual, así como acceder a ellos y leerlos.
 
+### Esta aplicación requiere:
+#### - node versión 18.17.1
+#### - npm versión 9.6.7 ó npm versión 9.8.1 (versiones en las que se desarrolló y probó)
+
 ## Instrucciones de Ejecución
 
 Sigue estos pasos para ejecutar la aplicación en cualquier ordenador después de clonar el repositorio:
