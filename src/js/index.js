@@ -17,6 +17,7 @@ const dreamListToStartBtn = document.getElementById("backToStartBtn3");
 const recordToStartBtn = document.getElementById("backToStartBtn");
 const saveDreamBtn = document.getElementById("saveDreamBtn");
 const savedDreamToStartBtn = document.getElementById("acceptBtn");
+const savedDreamToListBtn = document.getElementById("dreamListBtn2");
 
 //Referencia al formulario para guardar sueño
 const dreamForm = document.getElementById("dreamForm");
@@ -88,6 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
     savedDreamToStartBtn.addEventListener('click', function () {
         savedDream.classList.add("hidden");
         start.classList.remove("hidden");
+    });
+});
+
+// Saved dream to list
+document.addEventListener('DOMContentLoaded', function () {
+    savedDreamToListBtn.addEventListener('click', function () {
+        savedDream.classList.add("hidden");
+        dreamList.classList.remove("hidden");
     });
 });
 
