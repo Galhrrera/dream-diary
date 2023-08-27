@@ -19,6 +19,7 @@ const saveDreamBtn = document.getElementById("saveDreamBtn");
 const savedDreamToStartBtn = document.getElementById("acceptBtn");
 const savedDreamToListBtn = document.getElementById("dreamListBtn2");
 const dreamDetailsToListBtn = document.getElementById("backToListBtn");
+const detailsDreamToStartBtn = document.getElementById("backToStartBtn2");
 
 //Referencia al formulario para guardar sueño
 const dreamForm = document.getElementById("dreamForm");
@@ -103,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 // Dream details to list
 document.addEventListener('DOMContentLoaded', function () {
     dreamDetailsToListBtn.addEventListener("click", () => {
@@ -111,6 +111,16 @@ document.addEventListener('DOMContentLoaded', function () {
         dreamList.classList.remove("hidden");
     });
 });
+
+// details to start
+document.addEventListener('DOMContentLoaded', function () {
+    detailsDreamToStartBtn.addEventListener("click", () => {
+        dreamDetails.classList.add("hidden");
+        start.classList.remove("hidden");
+    });
+});
+
+
 
 
 //Guardar sueño en localstorage
@@ -191,12 +201,12 @@ function showDreamDetails(event) {
     //     document.getElementById("dream-list-section").classList.remove("hidden");
     // });
 
-    document.getElementById("backToStartBtn2").addEventListener("click", () => {
-        // document.getElementById("dream-details-section").style.display = "none";
-        dreamDetails.classList.add("hidden");
-        // document.getElementById("dream-list-section").style.display = "block";
-        start.classList.remove("hidden");
-    });
+    // document.getElementById("backToStartBtn2").addEventListener("click", () => {
+    //     // document.getElementById("dream-details-section").style.display = "none";
+    //     dreamDetails.classList.add("hidden");
+    //     // document.getElementById("dream-list-section").style.display = "block";
+    //     start.classList.remove("hidden");
+    // });
 }
 
 // Función para cargar la lista de sueños al cargar la página
