@@ -18,6 +18,7 @@ const recordToStartBtn = document.getElementById("backToStartBtn");
 const saveDreamBtn = document.getElementById("saveDreamBtn");
 const savedDreamToStartBtn = document.getElementById("acceptBtn");
 const savedDreamToListBtn = document.getElementById("dreamListBtn2");
+const dreamDetailsToListBtn = document.getElementById("backToListBtn");
 
 //Referencia al formulario para guardar sueño
 const dreamForm = document.getElementById("dreamForm");
@@ -102,6 +103,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Dream details to list
+document.addEventListener('DOMContentLoaded', function () {
+    dreamDetailsToListBtn.addEventListener("click", () => {
+        dreamDetails.classList.add("hidden");
+        dreamList.classList.remove("hidden");
+    });
+});
+
+
 //Guardar sueño en localstorage
 document.addEventListener("DOMContentLoaded", function () {
     // Agregar un manejador de eventos para el envío del formulario
@@ -168,17 +179,17 @@ function showDreamDetails(event) {
 
     // Ocultar la lista de sueños y mostrar la sección de detalles
     // document.getElementById("dream-list-section").style.display = "none";
-    document.getElementById("dream-list-section").classList.add("hidden");
+    dreamList.classList.add("hidden");
     // document.getElementById("dream-details-section").style.display = "block";
-    document.getElementById("dream-details-section").classList.remove("hidden");
+    dreamDetails.classList.remove("hidden");
 
     // Agregar evento click a los botones de regreso
-    document.getElementById("backToListBtn").addEventListener("click", () => {
-        // document.getElementById("dream-details-section").style.display = "none";
-        document.getElementById("dream-details-section").classList.add("hidden");
-        // document.getElementById("dream-list-section").style.display = "block";
-        document.getElementById("dream-list-section").classList.remove("hidden");
-    });
+    // document.getElementById("backToListBtn").addEventListener("click", () => {
+    //     // document.getElementById("dream-details-section").style.display = "none";
+    //     document.getElementById("dream-details-section").classList.add("hidden");
+    //     // document.getElementById("dream-list-section").style.display = "block";
+    //     document.getElementById("dream-list-section").classList.remove("hidden");
+    // });
 
     document.getElementById("backToStartBtn2").addEventListener("click", () => {
         // document.getElementById("dream-details-section").style.display = "none";
