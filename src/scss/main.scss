@@ -13,7 +13,7 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
     padding: 0;
     font-family: sans-serif;
     width: $max-width;
-    border: 1px solid black;
+    // border: 1px solid black;
     /*ELMINAR Y CORREGIR LO DEMÁS*/
 }
 
@@ -302,6 +302,43 @@ section {
         &:hover {
             background-color: $color-bordes;
         }
+    }
+}
+
+#dream-details-section {
+    height: $max-height;
+    flex-direction: column;
+    align-items: center;
+
+    .section-title {
+        text-align: center;
+        justify-content: center;
+        margin-top: 120px;
+        font-size: 30px;
+    }
+
+    .details-dream-container {
+        background-color: $color-fondo-app;
+        margin-top: 100px;
+        width: 320px;
+        max-height: 300px;
+        margin-left: 30px;
+        overflow-x: auto;
+        padding: 5px;
+    
+        p {
+            padding-top: 10px;
+            padding-bottom: 5px;
+            max-width: 300px;
+            justify-content: center;
+            font-size: 20px;
+        }
+    }
+
+    .btns-container {
+        margin-top: 20px;
+        max-height: 250px;
+        padding-left: 30px;
     }
 }
 
