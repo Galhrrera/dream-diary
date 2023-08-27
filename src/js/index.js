@@ -120,9 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
-
 //Guardar sueño en localstorage
 document.addEventListener("DOMContentLoaded", function () {
     // Agregar un manejador de eventos para el envío del formulario
@@ -192,21 +189,6 @@ function showDreamDetails(event) {
     dreamList.classList.add("hidden");
     // document.getElementById("dream-details-section").style.display = "block";
     dreamDetails.classList.remove("hidden");
-
-    // Agregar evento click a los botones de regreso
-    // document.getElementById("backToListBtn").addEventListener("click", () => {
-    //     // document.getElementById("dream-details-section").style.display = "none";
-    //     document.getElementById("dream-details-section").classList.add("hidden");
-    //     // document.getElementById("dream-list-section").style.display = "block";
-    //     document.getElementById("dream-list-section").classList.remove("hidden");
-    // });
-
-    // document.getElementById("backToStartBtn2").addEventListener("click", () => {
-    //     // document.getElementById("dream-details-section").style.display = "none";
-    //     dreamDetails.classList.add("hidden");
-    //     // document.getElementById("dream-list-section").style.display = "block";
-    //     start.classList.remove("hidden");
-    // });
 }
 
 // Función para cargar la lista de sueños al cargar la página
