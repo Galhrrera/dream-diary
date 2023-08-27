@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startToDreamListBtn.addEventListener('click', function () {
         start.classList.add("hidden");
         dreamList.classList.remove("hidden");
+        loadDreams();
     });
 });
 
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     savedDreamToListBtn.addEventListener('click', function () {
         savedDream.classList.add("hidden");
         dreamList.classList.remove("hidden");
+        loadDreams();
     });
 });
 
@@ -127,4 +129,61 @@ document.addEventListener("DOMContentLoaded", function () {
         recordDream.classList.add("hidden");
         savedDream.classList.remove("hidden");
     });
+});
+
+// Función para cargar los sueños desde el Local Storage y mostrarlos en la lista
+function loadDreams() {
+    const dreamList = document.getElementById("dreamList");
+    const dreams = JSON.parse(localStorage.getItem("dreams")) || [];
+    alert(dreams);
+
+    // Limpiar la lista antes de agregar los elementos
+    dreamList.innerHTML = "";
+
+    // Agregar cada sueño como un elemento de la lista
+    dreams.forEach((dream, index) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("dream-item");
+        listItem.innerHTML = `<a href="#" data-index="${index}">${dream.title}</a>`;
+        dreamList.appendChild(listItem);
+    });
+
+    // Agregar evento click a los elementos de la lista
+    const dreamItems = document.querySelectorAll(".dream-item a");
+    dreamItems.forEach(item => {
+        item.addEventListener("click", showDreamDetails);
+    });
+}
+
+// Función para mostrar los detalles del sueño seleccionado
+function showDreamDetails(event) {
+    event.preventDefault();
+    const dreamIndex = event.target.getAttribute("data-index");
+    const dreams = JSON.parse(localStorage.getItem("dreams")) || [];
+    const dream = dreams[dreamIndex];
+
+    // Actualizar la sección de detalles con la información del sueño
+    document.getElementById("detailDate").textContent = dream.date;
+    document.getElementById("detailTitle").textContent = dream.title;
+    document.getElementById("detailDescription").textContent = dream.description;
+
+    // Ocultar la lista de sueños y mostrar la sección de detalles
+    document.getElementById("dream-list-section").style.display = "none";
+    document.getElementById("dream-details-section").style.display = "block";
+
+    // Agregar evento click a los botones de regreso
+    document.getElementById("backToListBtn").addEventListener("click", () => {
+        document.getElementById("dream-details-section").style.display = "none";
+        document.getElementById("dream-list-section").style.display = "block";
+    });
+
+    document.getElementById("backToStartBtn2").addEventListener("click", () => {
+        document.getElementById("dream-details-section").style.display = "none";
+        document.getElementById("dream-list-section").style.display = "block";
+    });
+}
+
+// Función para cargar la lista de sueños al cargar la página
+window.addEventListener("load", () => {
+    loadDreams();
 });
