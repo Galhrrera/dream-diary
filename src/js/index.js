@@ -47,7 +47,6 @@ function hideSplahs() {
     header.classList.remove("hidden");
 }
 
-//CORREGIR MÉTODO
 headerLink.addEventListener("click", () => {
     hideAllSections();
     header.classList.remove("hidden");
@@ -184,10 +183,8 @@ function showDreamDetails(event) {
     document.getElementById("detailTitle").textContent = dream.title;
     document.getElementById("detailDescription").textContent = dream.description;
 
-    // Ocultar la lista de sueños y mostrar la sección de detalles
-    // document.getElementById("dream-list-section").style.display = "none";
+
     dreamList.classList.add("hidden");
-    // document.getElementById("dream-details-section").style.display = "block";
     dreamDetails.classList.remove("hidden");
 }
 
