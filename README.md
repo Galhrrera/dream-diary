@@ -21,7 +21,16 @@ Navega a la carpeta del proyecto:
 cd dream-diary
 ```
 
-Luego, instala las dependencias necesarias ejecutando:
+#### Preinstala el bundler
+Estando en la terminal, en la raíz del rpoyecto, ingresa el siguiente comando:
+```
+npm run preinstall
+```
+
+Este comando instalará el bundler del proyecto.
+
+#### instala las dependencias
+En la terminal ingresa el siguiente comando:
 ```
 npm install
 ```
