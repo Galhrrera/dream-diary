@@ -191,12 +191,14 @@ section {
                 border-bottom: 3px solid $color-extra-2;
                 text-align: center;
                 justify-content: center;
-                width: 300px;
+                width: 290px;
                 list-style: none;
-                
+                border-radius: 8px;
+                background-color: $color-extra-1;
+                // margin: 5px;
 
                 &:hover {
-                    background-color: $color-extra-1;
+                    background-color: $color-extra-2;
                 }
 
                 a {
