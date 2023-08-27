@@ -16,6 +16,7 @@ const startToRecordDreamBtn = document.getElementById("recordDreamBtn");
 const dreamListToStartBtn = document.getElementById("backToStartBtn3");
 const recordToStartBtn = document.getElementById("backToStartBtn");
 const saveDreamBtn = document.getElementById("saveDreamBtn");
+const savedDreamToStartBtn = document.getElementById("acceptBtn");
 
 //Referencia al formulario para guardar sueño
 const dreamForm = document.getElementById("dreamForm");
@@ -82,6 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Saved dream to start
+document.addEventListener('DOMContentLoaded', function () {
+    savedDreamToStartBtn.addEventListener('click', function () {
+        savedDream.classList.add("hidden");
+        start.classList.remove("hidden");
+    });
+});
 
 //Guardar sueño en localstorage
 document.addEventListener("DOMContentLoaded", function () {
