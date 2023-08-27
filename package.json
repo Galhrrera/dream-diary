@@ -6,10 +6,10 @@
   "main": "dist/index.js",
   "scripts": {
     "clean:dev": "rimraf ./dist",
-    "clean:prod": "rimraf ./public",
+    "clean:prod": "rimraf ./dist",
     "preinstall": "npm install parcel-bundler",
     "dev": "npm run clean:dev && parcel ./src/*.html",
-    "prod": "npm run clean:prod && parcel build ./src/*.html --dist-dir ./public"
+    "prod": "npm run clean:prod && parcel build ./src/*.html"
   },
   "keywords": [],
   "author": "",
