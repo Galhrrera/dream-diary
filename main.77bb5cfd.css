@@ -65,7 +65,7 @@ section {
 }
 
 #title-section {
-  background-image: url("/splash-bg.ba3874c2.jpg");
+  background-image: url("./splash-bg.ba3874c2.jpg");
   height: 808px;
   justify-content: center;
   align-items: center;
