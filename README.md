@@ -1,5 +1,3 @@
-<!-- # dream-diary
-Actividad evaluativa para el módulo 2 del curso de aplicaciones móviles 2023-20: Una aplicación híbrida -->
 # Dream Diary App
 
 Esta es una aplicación híbrida desarrollada como actividad evaluativa para el módulo 2 del curso de aplicaciones móviles 2023-20 en el programa de ingeniería de sistemas e informática. La aplicación permite a los usuarios registrar y almacenar sus sueños en un diario virtual, así como acceder a ellos y leerlos.
