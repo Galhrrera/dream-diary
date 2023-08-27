@@ -177,7 +177,7 @@ section {
         margin-bottom: 10px;
         // border: 2px solid $color-extra-1;
         width: 310px;
-        border-bottom: 2px solid black;
+        // border-bottom: 2px solid black;
 
         ul {
             list-style: none;
@@ -189,9 +189,21 @@ section {
                 // margin-bottom: 10px;
                 padding: 10px;
                 border-bottom: 3px solid $color-extra-2;
+                text-align: center;
+                justify-content: center;
+                width: 300px;
+                list-style: none;
+                
 
                 &:hover {
                     background-color: $color-extra-1;
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 20px;
+                    // text-align: center;
                 }
             }
 
