@@ -318,18 +318,20 @@ section {
     .section-title {
         text-align: center;
         justify-content: center;
-        margin-top: 120px;
+        // margin-top: 120px;
         font-size: 30px;
+        padding-top: 120px;
+        padding-bottom: 30px;
     }
 
     .details-dream-container {
         background-color: $color-fondo-app;
-        margin-top: 100px;
+         padding-top: 50px;
         width: 320px;
-        max-height: 300px;
+        height: 300px;
         margin-left: 30px;
         overflow-x: auto;
-        padding: 5px;
+        overflow-y: auto;
 
         p {
             padding-top: 10px;
