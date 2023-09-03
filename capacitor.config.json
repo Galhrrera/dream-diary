@@ -1,0 +1,8 @@
+{
+  "appId": "co.edu.upb.dream_diary_app",
+  "appName": "dream-diary",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
