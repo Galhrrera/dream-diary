@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">dream-diary</string>
+    <string name="title_activity_main">dream-diary</string>
+    <string name="package_name">co.edu.upb.dream_diary_app</string>
+    <string name="custom_url_scheme">co.edu.upb.dream_diary_app</string>
+</resources>
