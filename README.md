@@ -67,3 +67,6 @@ Las siguientes dependencias se utilizan en este proyecto:
 - **sass v1.66.1**: Compilador de Sass para estilos.
 - **rimraf v5.0.1**: Herramienta para eliminar directorios de manera recursiva y segura.
 - **parcel v1.12.5**: Empaquetador de aplicaciones web para el desarrollo y la construcción.
+
+  ## Wireframes de la aplicación
+  <a href="https://www.figma.com/file/GGQbg9XoqCIfZi7Gp9WGs4/Dream-diary?type=design&node-id=0%3A1&mode=design&t=bx5wlWOBIbpvhUsL-1" target="_blank"> Wireframes figma </a>
