@@ -3,9 +3,9 @@ $color-bordes: #ebb06e;
 $color-botones: #b1eb7a;
 $color-extra-1: #6ec7eb;
 $color-extra-2: #e29deb;
-$max-width: 380px;
+$max-width: 393px;
 $max-height: 808px;
-$splash-title-width: 332px;
+$splash-title-width: 353px;
 $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 
 * {
@@ -62,7 +62,7 @@ $splash-title-bg-color: rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-    width: 80%;
+    width: 84%;
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 8px;
@@ -156,12 +156,12 @@ section {
 
     .list-container {
         height: 450px;
-        margin-left: 30px;
+        margin-left: 35px;
         overflow-y: auto;
         overflow-x: hidden;
         border: 1px solid #ccc;
         margin-bottom: 10px;
-        width: 310px;
+        width: 320px;
 
         ul {
             list-style: none;
@@ -173,7 +173,7 @@ section {
                 border-bottom: 3px solid $color-extra-2;
                 text-align: center;
                 justify-content: center;
-                width: 290px;
+                width: 300px;
                 list-style: none;
                 border-radius: 8px;
                 background-color: $color-extra-1;
@@ -216,7 +216,7 @@ section {
     form {
         margin-top: 50px;
         margin-left: 30px;
-        width: 300px;
+        width: 330px;
 
 
         label {
@@ -269,7 +269,7 @@ section {
         #saveDreamBtn {
             margin: 0;
             margin-top: 15px;
-            width: 300px;
+            width: 330px;
         }
     }
 }
@@ -324,7 +324,7 @@ section {
     .details-dream-container {
         background-color: $color-fondo-app;
         padding-top: 50px;
-        width: 320px;
+        width: 330px;
         height: 300px;
         margin-left: 30px;
         overflow-x: auto;
