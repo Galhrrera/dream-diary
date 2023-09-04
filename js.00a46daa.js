@@ -125,6 +125,7 @@ var recordDream = document.getElementById("record-dream-section");
 var savedDream = document.getElementById("saved-dream-section");
 var dreamDetails = document.getElementById("dream-details-section");
 var dreamList = document.getElementById("dream-list-section");
+var creditsSection = document.getElementById("credits-section");
 
 //Referencias header
 var header = document.getElementById("header");
@@ -140,6 +141,8 @@ var savedDreamToStartBtn = document.getElementById("acceptBtn");
 var savedDreamToListBtn = document.getElementById("dreamListBtn2");
 var dreamDetailsToListBtn = document.getElementById("backToListBtn");
 var detailsDreamToStartBtn = document.getElementById("backToStartBtn2");
+var startToCreditsBtn = document.getElementById("creditstBtn");
+var creditsToStarBtn = document.getElementById("backToStartBtn4");
 
 //Referencia al formulario para guardar sueño
 var dreamForm = document.getElementById("dreamForm");
@@ -156,6 +159,7 @@ function hideAllSections() {
   dreamDetails.classList.add("hidden");
   dreamList.classList.add("hidden");
   header.classList.add("hidden");
+  creditsSection.classList.add("hidden");
 }
 function hideSplahs() {
   splash.classList.add("hidden");
@@ -166,6 +170,22 @@ headerLink.addEventListener("click", function () {
   hideAllSections();
   header.classList.remove("hidden");
   start.classList.remove("hidden");
+});
+
+//Start to credits section
+document.addEventListener('DOMContentLoaded', function () {
+  creditstBtn.addEventListener('click', function () {
+    start.classList.add("hidden");
+    creditsSection.classList.remove("hidden");
+  });
+});
+
+// credits to start section
+document.addEventListener('DOMContentLoaded', function () {
+  creditsToStarBtn.addEventListener('click', function () {
+    creditsSection.classList.add("hidden");
+    start.classList.remove("hidden");
+  });
 });
 
 //Start to List section
@@ -329,7 +349,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52212" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51652" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

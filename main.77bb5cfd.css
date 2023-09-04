@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  width: 373px;
+  width: 393px;
 }
 
 #header {
@@ -29,17 +29,17 @@
 }
 #header a {
   text-decoration: none;
-  width: 373px;
+  width: 393px;
   color: black;
   font-weight: 600;
   text-align: center;
-  width: 332px;
+  width: 353px;
   font-size: 45px;
   margin: 0;
 }
 
 .btn {
-  width: 80%;
+  width: 84%;
   padding: 20px;
   margin-bottom: 50px;
   border-radius: 8px;
@@ -75,13 +75,44 @@ section {
 }
 #title-section h1 {
   text-align: center;
-  width: 332px;
+  width: 353px;
   font-size: 45px;
   margin: 0;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   top: 50%;
+}
+
+#credits-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 808px;
+}
+#credits-section .section-title {
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  color: black;
+  padding-top: 120px;
+  padding-bottom: 20px;
+}
+#credits-section h3 {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 35px;
+  width: 350px;
+  margin-left: 20px;
+}
+#credits-section h4 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+#credits-section .btn {
+  margin-left: 30px;
+  margin-top: 200px;
 }
 
 #start-section {
@@ -117,12 +148,11 @@ section {
 }
 #dream-list-section .list-container {
   height: 450px;
-  margin-left: 30px;
+  margin-left: 35px;
   overflow-y: auto;
   overflow-x: hidden;
-  border: 1px solid #ccc;
   margin-bottom: 10px;
-  width: 310px;
+  width: 320px;
 }
 #dream-list-section .list-container ul {
   list-style: none;
@@ -134,7 +164,7 @@ section {
   border-bottom: 3px solid #e29deb;
   text-align: center;
   justify-content: center;
-  width: 290px;
+  width: 300px;
   list-style: none;
   border-radius: 8px;
   background-color: #6ec7eb;
@@ -169,7 +199,7 @@ section {
 #record-dream-section form {
   margin-top: 50px;
   margin-left: 30px;
-  width: 300px;
+  width: 330px;
 }
 #record-dream-section form label {
   display: block;
@@ -214,7 +244,7 @@ section {
 #record-dream-section form #saveDreamBtn {
   margin: 0;
   margin-top: 15px;
-  width: 300px;
+  width: 330px;
 }
 
 #saved-dream-section {
@@ -260,7 +290,7 @@ section {
 #dream-details-section .details-dream-container {
   background-color: #87ceeb;
   padding-top: 50px;
-  width: 320px;
+  width: 330px;
   height: 300px;
   margin-left: 30px;
   overflow-x: auto;
