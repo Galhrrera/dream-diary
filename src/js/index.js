@@ -5,6 +5,7 @@ const recordDream = document.getElementById("record-dream-section");
 const savedDream = document.getElementById("saved-dream-section");
 const dreamDetails = document.getElementById("dream-details-section");
 const dreamList = document.getElementById("dream-list-section");
+const creditsSection = document.getElementById("credits-section");
 
 //Referencias header
 const header = document.getElementById("header");
@@ -20,6 +21,8 @@ const savedDreamToStartBtn = document.getElementById("acceptBtn");
 const savedDreamToListBtn = document.getElementById("dreamListBtn2");
 const dreamDetailsToListBtn = document.getElementById("backToListBtn");
 const detailsDreamToStartBtn = document.getElementById("backToStartBtn2");
+const startToCreditsBtn = document.getElementById("creditstBtn");
+const creditsToStarBtn = document.getElementById("backToStartBtn4");
 
 //Referencia al formulario para guardar sueño
 const dreamForm = document.getElementById("dreamForm");
@@ -39,6 +42,7 @@ function hideAllSections() {
     dreamDetails.classList.add("hidden");
     dreamList.classList.add("hidden");
     header.classList.add("hidden");
+    creditsSection.classList.add("hidden");
 }
 
 function hideSplahs() {
@@ -51,6 +55,24 @@ headerLink.addEventListener("click", () => {
     hideAllSections();
     header.classList.remove("hidden");
     start.classList.remove("hidden");
+});
+
+
+//Start to credits section
+document.addEventListener('DOMContentLoaded', function () {
+    creditstBtn.addEventListener('click', function () {
+        start.classList.add("hidden");
+        creditsSection.classList.remove("hidden");
+    });
+});
+
+// credits to start section
+
+document.addEventListener('DOMContentLoaded', function () {
+    creditsToStarBtn.addEventListener('click', function () {
+        creditsSection.classList.add("hidden");
+        start.classList.remove("hidden");
+    });
 });
 
 //Start to List section
