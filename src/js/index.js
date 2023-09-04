@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // credits to start section
-
 document.addEventListener('DOMContentLoaded', function () {
     creditsToStarBtn.addEventListener('click', function () {
         creditsSection.classList.add("hidden");
